@@ -6,7 +6,7 @@
 /*   By: ebabaogl <ebabaogl@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 17:01:31 by ebabaogl          #+#    #+#             */
-/*   Updated: 2024/04/19 22:32:26 by ebabaogl         ###   ########.fr       */
+/*   Updated: 2024/04/21 18:14:25 by ebabaogl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
-
-	ptr = s;
-	while (n--)
-	{
-		*ptr = 0;
-		ptr++;
-	}
+	ft_memset(s, 0, n);
 }

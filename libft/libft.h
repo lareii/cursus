@@ -6,7 +6,7 @@
 /*   By: ebabaogl <ebabaogl@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:05:11 by ebabaogl          #+#    #+#             */
-/*   Updated: 2024/04/19 23:20:07 by ebabaogl         ###   ########.fr       */
+/*   Updated: 2024/04/21 17:38:49 by ebabaogl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <stdio.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
