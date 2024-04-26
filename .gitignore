@@ -1,9 +1,9 @@
 # ide settings
 .vscode/
 
-# builds and objects
+# links and builds
 *.out
 *.o
 
-# ignore the subjects
+# subjects
 *.pdf

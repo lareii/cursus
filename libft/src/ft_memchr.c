@@ -6,7 +6,7 @@
 /*   By: ebabaogl <ebabaogl@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:41:55 by ebabaogl          #+#    #+#             */
-/*   Updated: 2024/04/26 16:39:47 by ebabaogl         ###   ########.fr       */
+/*   Updated: 2024/04/27 01:50:53 by ebabaogl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n > 0)
 	{
 		if (*p == (unsigned char)c)
-			return (c);
+			return (p);
 		p++;
 		n--;
 	}
