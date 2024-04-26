@@ -6,7 +6,7 @@
 /*   By: ebabaogl <ebabaogl@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:20:27 by ebabaogl          #+#    #+#             */
-/*   Updated: 2024/04/19 16:30:07 by ebabaogl         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:43:10 by ebabaogl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	c;
+	const char	*c;
 
-	c = 0;
-	while (*s)
-	{
-		s++;
+	c = s;
+	while (*c)
 		c++;
-	}
-	return (c);
+	return (c - s);
 }

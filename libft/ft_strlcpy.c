@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebabaogl <ebabaogl@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 16:38:06 by ebabaogl          #+#    #+#             */
-/*   Updated: 2024/04/26 14:59:30 by ebabaogl         ###   ########.fr       */
+/*   Created: 2024/04/26 16:57:33 by ebabaogl          #+#    #+#             */
+/*   Updated: 2024/04/26 17:44:22 by ebabaogl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned char	*ptr;
+	size_t	c;
 
-	ptr = (unsigned char *)s;
-	while (n > 0)
+	c = 0;
+	if (size != 0)
 	{
-		*ptr = c;
-		ptr++;
-		n--;
+		while (src[c] && c < (size - 1))
+		{
+			dest[c] = src[c];
+			c++;
+		}
+		dest[c] = '\0';
 	}
-	return (s);
+	return (ft_strlen(src));
 }
+
+/*
+strcpy: src uzun olursa
+strncpy: n > len(dst) && len(src) > len(dst)
+strlcpy: n > len(dst) && len(src) > len(dst)
+
+zattiri zort zort oluyo bu durumlarda
+*/
