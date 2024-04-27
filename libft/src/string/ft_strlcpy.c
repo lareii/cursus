@@ -1,16 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebabaogl <ebabaogl@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 16:00:44 by ebabaogl          #+#    #+#             */
-/*   Updated: 2024/04/19 16:03:30 by ebabaogl         ###   ########.fr       */
+/*   Created: 2024/04/26 16:57:33 by ebabaogl          #+#    #+#             */
+/*   Updated: 2024/04/27 18:12:05 by ebabaogl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	return (c != 127 && c > 31);
+	size_t	c;
+
+	c = 0;
+	if (size != 0)
+	{
+		while (src[c] && c < (size - 1))
+		{
+			dest[c] = src[c];
+			c++;
+		}
+		dest[c] = '\0';
+	}
+	return (ft_strlen(src));
 }
+
+/*
+strcpy: src uzun olursa
+strncpy: n > len(dst) && len(src) > len(dst)
+strlcpy: n > len(dst) && len(src) > len(dst)
+
+zattiri zort zort oluyo bu durumlarda
+*/

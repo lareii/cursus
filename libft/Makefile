@@ -2,13 +2,13 @@ NAME = libft.a
 CC = gcc
 FLAGS = -Wall -Wextra -Werror -Iinclude
 
-VPATH = src
+VPATH = src:src/ascii:src/memory:src/string
 BUILD_DIR = build
 
-SRCS =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+SRCS =	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 		ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c \
-		ft_bzero.c ft_memset.c ft_memcpy.c ft_memcmp.c ft_memchr.c \
-		ft_memmove.c
+		ft_memset.c ft_memcpy.c ft_memchr.c ft_memmove.c \
+		ft_bzero.c ft_memcmp.c
 OBJS = $(addprefix $(BUILD_DIR)/,$(SRCS:.c=.o))
 
 $(NAME): $(OBJS)
@@ -28,8 +28,7 @@ fclean:	clean
 
 re: fclean all
 
-test:
-	$(CC) $(FLAGS) -L. -lft test.c -o program
+test: test.c
+	$(CC) $(FLAGS) -o test test.c -L. -lft
 
-.SILENT:
 .PHONY: all clean fclean re test

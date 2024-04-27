@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebabaogl <ebabaogl@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/27 15:50:00 by ebabaogl          #+#    #+#             */
-/*   Updated: 2024/04/27 16:52:38 by ebabaogl         ###   ########.fr       */
+/*   Created: 2024/04/23 14:31:16 by ebabaogl          #+#    #+#             */
+/*   Updated: 2024/04/27 18:52:42 by ebabaogl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
-#include <stdio.h>
+#include "libft.h"
 
-int	main(void)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*str;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	str = "hello";
-	printf("%p", ft_strchr(str, 'e'));
+	if (!dst && !src)
+		return (NULL);
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	while (n--)
+		*d++ = *s++;
+	return (dst);
 }

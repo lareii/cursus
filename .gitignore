@@ -2,9 +2,11 @@
 .vscode/
 
 # builds etc.
+build/
 *.out
 *.o
 *.a
+*.so
 
 # subjects
 *.pdf
