@@ -1,9 +1,10 @@
 # ide settings
 .vscode/
 
-# links and builds
+# builds etc.
 *.out
 *.o
+*.a
 
 # subjects
 *.pdf
