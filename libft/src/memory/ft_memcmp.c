@@ -6,7 +6,7 @@
 /*   By: ebabaogl <ebabaogl@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:52:23 by ebabaogl          #+#    #+#             */
-/*   Updated: 2024/04/27 18:12:05 by ebabaogl         ###   ########.fr       */
+/*   Updated: 2024/04/27 19:12:18 by ebabaogl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	p1 = (unsigned char *)s1;
 	p2 = (unsigned char *)s2;
-	while (n > 0)
+	while (n--)
 	{
 		if (*p1 > *p2)
 			return (1);
@@ -30,7 +30,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			p1++;
 			p2++;
 		}
-		n--;
 	}
 	return (0);
 }
